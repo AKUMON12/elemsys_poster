@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAMPass - Tech Poster</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/deua2yipj/image/upload/v1766954626/logo-removebg-preview_ucpsxx.png">
+
     <style>
         :root {
             --navy: #050a14;
@@ -32,6 +36,35 @@
             justify-content: center;
             align-items: center;
             padding: 40px;
+        }
+
+        /* Container for the logo */
+        .logo-container {
+            position: absolute;
+            /* Moves it relative to the page */
+            top: 0px;
+            /* Distance from the top */
+            left: 30px;
+            /* Distance from the right */
+            z-index: 1000;
+            /* Ensures it stays on top of other elements */
+        }
+
+        /* Styling the actual logo image */
+        .top-right-logo {
+            width: 170px;
+            /* Adjust size as needed */
+            height: auto;
+            transition: transform 0.3s ease;
+            /* Smooth animation when hovering */
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+            /* Adds a subtle shadow */
+        }
+
+        /* Fancy hover effect */
+        .top-right-logo:hover {
+            transform: scale(1.1);
+            /* Slightly grows when you point at it */
         }
 
         .poster {
@@ -298,6 +331,14 @@
 <body>
     <div class="poster">
         <div class="container">
+
+            <div class="logo-container">
+                <a href="#">
+                    <img src="https://res.cloudinary.com/deua2yipj/image/upload/v1766954626/logo-removebg-preview_ucpsxx.png"
+                        alt="CAMPass Logo" class="top-right-logo">
+                </a>
+            </div>
+
             <header class="header">
                 <div class="subtitle">AI Security Solutions</div>
                 <h1 class="title">CAMPass</h1>
